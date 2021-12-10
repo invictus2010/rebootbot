@@ -1,4 +1,4 @@
-# Reboot Your DigitalOcean Instance from Discord
+# Reboot Your DigitalOcean Droplet from Discord
 You can use this bot to reboot your DigitalOcean droplet from Discord and text someone in an emergency (like PagerDuty). 
 
 My gaming community's server is hosted on DigitalOcean and we have less technically inclined team members who want to be able to assist with server resets when needed. This lets them reboot the droplet with `^reboot` and also lets them ping me in an emergency with `^ping`.
