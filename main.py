@@ -31,8 +31,8 @@ def text_message():
     message = twilio_client.messages \
         .create(
             body = 'Check Haze Discord.',
-            from_ = '+17342281586',
-            to = phone_number
+            from_ = '+17342281586', # Your Twilio account phone number here
+            to = phone_number # Number you want to text
         )
     return message.status
 
@@ -47,7 +47,7 @@ async def on_message(message):
             print(author_role_ids)
     elif message.content.startswith('^ping'):
         sms_message = text_message()
-        await message.channel.send(f'Texting Invictus. Message status: {sms_message}')
+        await message.channel.send(f'Texting Invictus. Message status: {sms_message}') # Customize to your name
     elif message.content.startswith('^test'):
         author_role_ids = [y.id for y in message.author.roles]
         if 788117328046719017 in author_role_ids:
