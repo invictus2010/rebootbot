@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import discord
+from discord import Intents
 from twilio.rest import Client
 from discord.ext import commands
 import os
@@ -16,8 +17,9 @@ twilio_account = os.environ.get("twilio_account")
 twilio_phone_number = os.environ.get("twilio_phone_number")
 user_phone_number = os.environ.get("user_phone_number")
 
-
-client = discord.Client()
+intents = Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 twilio_client = Client(twilio_account, twilio_token)
 
 
